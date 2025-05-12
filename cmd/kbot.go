@@ -20,22 +20,22 @@ func LogUserMessage(c telebot.Context) {
 }
 
 var kbotCmd = &cobra.Command{
-	Use:     "kbot",
+	Use:     "start",
 	Aliases: []string{"start"},
 	Short:   "Telegram bot",
 	Long:    `A simple telegram bot`,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		TelegramToken := os.Getenv("TelegramToken")
-		if TelegramToken == "" {
-			log.Fatal("TelegramToken environment variable is not set")
+		TeleToken := os.Getenv("TELE_TOKEN")
+		if TeleToken == "" {
+			log.Fatal("TeleToken environment variable is not set")
 		}
 
 		fmt.Printf("kbot %s started\n", appVersion)
 
 		kbot, err := telebot.NewBot(telebot.Settings{
 			URL:    "",
-			Token:  TelegramToken,
+			Token:  TeleToken,
 			Poller: &telebot.LongPoller{Timeout: 10 * time.Second},
 		})
 
