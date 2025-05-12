@@ -43,6 +43,11 @@ var kbotCmd = &cobra.Command{
 			log.Fatalf("Failed to create bot: %v", err)
 		}
 
+		kbot.Handle(telebot.OnText, func(c telebot.Context) error {
+			LogUserMessage(c)
+			return c.Send("I don't understand this command. Try /start")
+		})
+
 		kbot.Handle("/start", func(c telebot.Context) error {
 			LogUserMessage(c)
 			return c.Send("Hello! I'm a simple bot.\n\n1. /quote - get a random quote\n2. /weather <city> - get the weather for a city")
