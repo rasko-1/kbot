@@ -1,47 +1,47 @@
 # kbot
 
 ## Overview
-`kbot` — це Telegram-бот, написаний на Go, який надає корисні команди, такі як отримання випадкової цитати та перегляд погоди у вказаному місті. Проєкт використовує бібліотеки [Cobra](https://github.com/spf13/cobra) для CLI та [telebot](https://github.com/tucnak/telebot) для роботи з Telegram API.
+`kbot` is a Telegram bot written in Go that provides useful commands such as getting a random quote and checking the weather in a specified city. The project uses [Cobra](https://github.com/spf13/cobra) for CLI and [telebot](https://github.com/tucnak/telebot) for working with the Telegram API.
 
 ## Features
-- Відповідь на команду `/start`
-- Отримання випадкової цитати через `/quote`
-- Перегляд погоди у місті через `/weather <місто>`
+- Responds to the `/start` command
+- Get a random quote with `/quote`
+- Check the weather in a city with `/weather <city>`
 
 ## Prerequisites
-- Go 1.18 або новіше
-- Telegram Bot Token (отримати у [BotFather](https://t.me/botfather))
-- API ключ для [weatherapi.com](https://www.weatherapi.com/)
-- (Рекомендовано) файл `.env` для зберігання токенів
+- Go 1.18 or newer
+- Telegram Bot Token (get it from [BotFather](https://t.me/botfather))
+- API key for [weatherapi.com](https://www.weatherapi.com/)
+- (Recommended) `.env` file for storing tokens
 
 ## Installation
-1. Клонуйте репозиторій:
+1. Clone the repository:
     ```bash
     git clone https://github.com/yourusername/kbot.git
     cd kbot
     ```
-2. Встановіть залежності:
+2. Install dependencies:
     ```bash
     go mod tidy
     ```
 
 ## Configuration
-Створіть файл `.env` у корені проєкту та додайте ваші токени:
+Create a `.env` file in the project root and add your tokens:
 ```
 TELE_TOKEN=your_telegram_token
 WeatherApiKey=your_weatherapi_key
 ```
 
 ## Usage
-Запустіть бота командою:
+Run the bot with:
 ```bash
 go run main.go kbot
 ```
-або зібраний бінарник:
+or build and run the binary:
 ```bash
 go build -o kbot
 ./kbot kbot
 ```
 
 ## Bot Link
-Ви можете знайти бота за посиланням: [kbot](https://t.me/josefSX6bot)
+You can find the bot here: [kbot](https://t.me/josefSX6bot)
