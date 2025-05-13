@@ -54,10 +54,7 @@ You can also run the bot using Docker. Make sure you have Docker installed and r
     ```
 2. Run the Docker container:
     ```
-    docker run -d --name kbot \
-        -e TELE_TOKEN=your_telegram_token \
-        -e WeatherApiKey=your_weatherapi_key \
-        kbot
+    docker run --name kbot start
     ```
 3. To stop the container:
     ```
