@@ -54,7 +54,7 @@ You can also run the bot using Docker. Make sure you have Docker installed and r
     ```
 2. Run the Docker container:
     ```
-    docker run --name kbot start
+    docker run -d --name kbot start
     ```
 3. To stop the container:
     ```
