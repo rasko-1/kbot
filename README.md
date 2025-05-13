@@ -45,3 +45,29 @@ go build -o kbot
 
 ## Bot Link
 You can find the bot here: [kbot](https://t.me/josefSX6bot)
+
+## Docker
+You can also run the bot using Docker. Make sure you have Docker installed and running.
+1. Build the Docker image:
+    ```
+    docker build -t kbot .
+    ```
+2. Run the Docker container:
+    ```
+    docker run -d --name kbot \
+        -e TELE_TOKEN=your_telegram_token \
+        -e WeatherApiKey=your_weatherapi_key \
+        kbot
+    ```
+3. To stop the container:
+    ```
+    docker stop kbot
+    ```
+4. To remove the container:
+    ```
+    docker rm kbot
+    ```
+5. To view logs:
+    ```
+    docker logs -f kbot
+    ```
